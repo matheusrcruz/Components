@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="../generics/style/bootstrap.min.css">
+        <link rel="stylesheet" href="../generics/reset/style.css">
+        <title>InfoLojas</title>
+</head>  
+<body>
+    <div class="container mt-3">  
+        <input class="form-control" id="entrada" type="text" placeholder="Pesquisa..">
+        <br>
+        <table class="table table-bordered">
+          <thead class="thead-dark">
+            <tr>
+              <th scope="col">Nome</th>
+              <th scope="col">Sobre Nome</th>
+              <th scope="col">Email</th>
+            </tr>
+          </thead>
+          <tbody id="infotb">
+            <tr>
+              <td>ZezinhoDBA</td>
+              <td>Camarada</td>
+              <td>zezin@joge.com</td>
+            </tr>
+            <tr>
+              <td>Valcilho</td>
+              <td>Nilo</td>
+              <td>Valcilho@IG.com</td>
+            </tr>
+            <tr>
+              <td>Vardo</td>
+              <td>Rei do gado</td>
+              <td>Vardo_Ellus@yahoo.com</td>
+            </tr>
+            <tr>
+              <td>Velho</td>
+              <td>Chico</td>
+              <td>VChico@test.com</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <nav aria-label>
+          <ul class="pagination justify-content-center">
+            <li class="page-item  ">
+              <a class="page-link" href="#" tabindex="-1">Anterior</a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item">
+              <a class="page-link" href="#">Próximo</a>
+            </li>
+          </ul>
+        </nav> 
+    <script src="../generics/js/jquery-3.3.1.slim.min.js"></script>
+    <script src="../generics/js/popper.min.js"></script>
+    <script src="../generics/js/bootsrap.min.js"></script>
+   <script>
+      $(document).ready(function(){
+         $("#entrada").on("keyup", function() {
+          var value = $(this).val().toLowerCase();
+         $("#infotb tr").filter(function() {
+        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+      });
+    });
+  });
+   </script>
+  </body>
+</html>
