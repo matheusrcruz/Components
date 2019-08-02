@@ -1,4 +1,15 @@
 
 #entrada{
     padding-bottom: 2%;
+
+}
+
+table,
+th,
+td {
+  border: 1px solid black;
+}
+
+tr:hover {
+  background-color: rgba(173, 216, 230, 0.5);
 }
